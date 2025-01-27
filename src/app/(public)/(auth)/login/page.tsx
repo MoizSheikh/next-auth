@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-
+// import { auth, signIn, signOut } from "@/auth";
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -18,7 +18,7 @@ export default function LoginPage() {
         password,
         redirect: false,
       });
-
+      console.log("result", result);
       if (result?.error) {
         setError("Invalid credentials");
         return;
