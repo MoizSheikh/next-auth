@@ -39,7 +39,7 @@ export const {
   session: {
     strategy: "jwt",
     // maxAge: 30 * 24 * 60 * 60, // 30 days
-    maxAge: 10,
+    maxAge: 10, // 10 seconds
     updateAge: 24 * 60 * 60, // 24 hours
   },
   callbacks: {
